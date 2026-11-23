@@ -1,0 +1,13 @@
+{
+  "id": "com.sirius.503",
+  "version": "1.0.0",
+  "vendor": "Sirius",
+  "type": "web",
+  "main": "index.html",
+  "title": "503",
+  "icon": "icon.png",
+  "largeIcon": "icon.png",
+  "bgImage": "",
+  "splashBackground": "",
+  "iconColor": "#000000"
+}

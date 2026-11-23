@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>503</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="app">
+    <!-- Header -->
+    <header id="header">
+      <img src="logo.png" alt="503" id="logo" />
+      <div id="status-indicator" title="Dispositivo não alcançável">
+        <span id="status-dot"></span>
+      </div>
+    </header>
+
+    <!-- Floor plan -->
+    <main id="floor-plan-wrapper">
+      <div id="floor-plan">
+        <img src="blueprint.png" id="blueprint" alt="Planta" />
+
+        <!-- Zones overlay — positions match FloorPlanView.swift percentages -->
+        <button class="zone" id="zone-cozinha"    data-zone="cozinha"    style="left:5.3%;  top:6.4%; width:13.6%; height:87.2%;">
+          <span class="zone-icon">🔊</span>
+          <span class="zone-label">Cozinha</span>
+        </button>
+        <button class="zone" id="zone-sala"       data-zone="sala"       style="left:24.9%; top:6.4%; width:28.3%; height:87.2%;">
+          <span class="zone-icon">🔊</span>
+          <span class="zone-label">Sala</span>
+        </button>
+        <button class="zone" id="zone-quarto"     data-zone="quarto"     style="left:59.4%; top:6.4%; width:35.2%; height:35.1%;">
+          <span class="zone-icon">🔊</span>
+          <span class="zone-label">Quarto</span>
+        </button>
+        <button class="zone" id="zone-banheiro"   data-zone="banheiro"   style="left:72.1%; top:47.7%; width:22.7%; height:11.3%;">
+          <span class="zone-icon">🔊</span>
+          <span class="zone-label">Banheiro</span>
+        </button>
+        <button class="zone" id="zone-escritorio" data-zone="escritorio" style="left:59.4%; top:66.2%; width:35.2%; height:26.8%;">
+          <span class="zone-icon">🔊</span>
+          <span class="zone-label">Escritório</span>
+        </button>
+      </div>
+    </main>
+
+    <!-- Toolbar -->
+    <footer id="toolbar">
+      <button class="ctrl-btn" id="btn-power"     onclick="app.power()">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M18.36 6.64A9 9 0 1 1 5.64 6.64"/><line x1="12" y1="2" x2="12" y2="12"/>
+        </svg>
+        <span>Power</span>
+      </button>
+      <div class="ctrl-divider"></div>
+      <button class="ctrl-btn" id="btn-input"     onclick="app.input()">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/>
+        </svg>
+        <span>Input</span>
+      </button>
+      <div class="ctrl-divider"></div>
+      <button class="ctrl-btn" id="btn-vol-down"  onclick="app.volumeDown()">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/>
+        </svg>
+        <span>Vol -</span>
+      </button>
+      <div class="ctrl-divider"></div>
+      <button class="ctrl-btn" id="btn-vol-up"    onclick="app.volumeUp()">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/>
+        </svg>
+        <span>Vol +</span>
+      </button>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
